@@ -4,8 +4,8 @@ Diff API - Assignment from Teletrax / 4C Insights
 
 
 ## Getting Started
-Follow the next steps to setup the project in you local machine
-* Get the solution and open it with Visual Studio 2015
+Follow the next steps to setup the project in you local machine:
+* Get the solution and open it with Visual Studio 2015.
 * Restore the NuGet Packages and Build the solution.
 * By default the application uses a memory repository so there is no need to worry about setting up a storage.
 * Make sure that ```Vrhw.Api``` is set as default startUp project and run the application.
@@ -24,7 +24,7 @@ PM> Update-Database
 ```
 * Edit the ```Vrhw.Api/App_Start/SimpleInjectorInitializer.cs``` to instantiate the ```SqlRepository``` instead of the 
 ```MemoryRepository```. The line is there so just comment out the ```MemoryRepository``` line and uncomment 
-the ```SqlRepository```
+the ```SqlRepository```.
 ```
 container.Register<IDiffRepository, SqlRepository>(Lifestyle.Scoped);
 //container.Register<IDiffRepository, MemoryRepository>(Lifestyle.Scoped);
@@ -35,33 +35,33 @@ Now you can run the ```Vrhw.Api``` and it will use a Sql Server Database as Repo
 
 #### Running Unit Tests and Integration Tests
 The project includes the xunit runner for visual studio, so they can be executed with the VS Test explorer.
-* Go to Test > Windows > Test Explorer
+* Go to Test > Windows > Test Explorer.
 * In the Test Explorer Window Click Run All.
 
 ## Projects in solution
 
 #### Vrhw.Core
-Here is where the Business Logic lays
+Here is where the Business Logic lays.
 
 #### Vrhw.Api
-Exposes the endpoints yo interact with the Business Logic. It also contains the integration tests 
-(which should be moved to another project but it turned out to be more complex than I expected and time ran out)
+Exposes the endpoints to interact with the Business Logic. It also contains the integration tests 
+(which should be moved to another project but it turned out to be more complex than I expected and time ran out).
 
 #### Vrhw.Shared
-Contains Interfaces, Dtos, Models and other elements that are shared across the solution
+Contains Interfaces, Dtos, Models and other elements that are shared across the projects of the solution.
 
 #### Vrhw.Tests
-Contains the Unit tests
+Contains the Unit tests (I would move the integration tests here).
 
 ### Repositories
 In order to provide options when it comes to define the data repository, there are two repositores to choose.
 This demostrates the god practices of not coupling the code to a specific storage.
 
 #### Vrhw.Repository.Memory
-A memory repository
+A memory repository.
 
 #### Vrhm.Repository.Sql
-A Sql Server repository using Entity Framework and Code First Migrations
+A Sql Server repository using Entity Framework and Code First Migrations.
 
 ## Tecnical Stack
 * Visual Studio 2015
