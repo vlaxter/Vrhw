@@ -1,0 +1,88 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vrhw.Api", "Vrhw.Api\Vrhw.Api.csproj", "{95582BF4-106D-4609-BC13-B4C10979DDC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vrhw.Tests", "Vrhw.Tests\Vrhw.Tests.csproj", "{B122DA12-7D46-493A-890B-C8D6D17F8597}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repositories", "Repositories", "{F3290F4A-1EEF-48E7-9B50-3B889B7D2386}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{922B0D6D-FBA0-46B2-96C5-0F7BBDE485C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vrhw.Shared", "Vrhw.Shared\Vrhw.Shared.csproj", "{B72307F1-0C74-4169-85DE-3359FED8A79C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vrhw.Core", "Vrhw.Core\Vrhw.Core.csproj", "{8031F2C5-E941-4E68-B5AA-DDE7ADBBCACE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vrhw.Repository.Sql", "Vrhw.Repository.Sql\Vrhw.Repository.Sql.csproj", "{EA40DAEA-BE71-4141-BCCF-21F5CCDC55A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vrhw.Repository.Memory", "Vrhw.Repository.Memory\Vrhw.Repository.Memory.csproj", "{8988EE85-3DF7-4F54-A43A-FF88D86CED8E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95582BF4-106D-4609-BC13-B4C10979DDC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95582BF4-106D-4609-BC13-B4C10979DDC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95582BF4-106D-4609-BC13-B4C10979DDC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95582BF4-106D-4609-BC13-B4C10979DDC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B122DA12-7D46-493A-890B-C8D6D17F8597}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B122DA12-7D46-493A-890B-C8D6D17F8597}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B122DA12-7D46-493A-890B-C8D6D17F8597}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B122DA12-7D46-493A-890B-C8D6D17F8597}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B72307F1-0C74-4169-85DE-3359FED8A79C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B72307F1-0C74-4169-85DE-3359FED8A79C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B72307F1-0C74-4169-85DE-3359FED8A79C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B72307F1-0C74-4169-85DE-3359FED8A79C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8031F2C5-E941-4E68-B5AA-DDE7ADBBCACE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8031F2C5-E941-4E68-B5AA-DDE7ADBBCACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8031F2C5-E941-4E68-B5AA-DDE7ADBBCACE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8031F2C5-E941-4E68-B5AA-DDE7ADBBCACE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA40DAEA-BE71-4141-BCCF-21F5CCDC55A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA40DAEA-BE71-4141-BCCF-21F5CCDC55A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA40DAEA-BE71-4141-BCCF-21F5CCDC55A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA40DAEA-BE71-4141-BCCF-21F5CCDC55A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8988EE85-3DF7-4F54-A43A-FF88D86CED8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8988EE85-3DF7-4F54-A43A-FF88D86CED8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8988EE85-3DF7-4F54-A43A-FF88D86CED8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8988EE85-3DF7-4F54-A43A-FF88D86CED8E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B122DA12-7D46-493A-890B-C8D6D17F8597} = {922B0D6D-FBA0-46B2-96C5-0F7BBDE485C9}
+		{EA40DAEA-BE71-4141-BCCF-21F5CCDC55A3} = {F3290F4A-1EEF-48E7-9B50-3B889B7D2386}
+		{8988EE85-3DF7-4F54-A43A-FF88D86CED8E} = {F3290F4A-1EEF-48E7-9B50-3B889B7D2386}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://vrivera.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Vrhw.Api\\Vrhw.Api.csproj
+		SccProjectName1 = Vrhw.Api
+		SccLocalPath1 = Vrhw.Api
+		SccProjectUniqueName2 = Vrhw.Core\\Vrhw.Core.csproj
+		SccProjectName2 = Vrhw.Core
+		SccLocalPath2 = Vrhw.Core
+		SccProjectUniqueName3 = Vrhw.Repository.Memory\\Vrhw.Repository.Memory.csproj
+		SccProjectTopLevelParentUniqueName3 = Vrhw.Api.sln
+		SccProjectName3 = Vrhw.Repository.Memory
+		SccLocalPath3 = Vrhw.Repository.Memory
+		SccProjectUniqueName4 = Vrhw.Repository.Sql\\Vrhw.Repository.Sql.csproj
+		SccProjectTopLevelParentUniqueName4 = Vrhw.Api.sln
+		SccProjectName4 = Vrhw.Repository.Sql
+		SccLocalPath4 = Vrhw.Repository.Sql
+		SccProjectUniqueName5 = Vrhw.Shared\\Vrhw.Shared.csproj
+		SccProjectName5 = Vrhw.Shared
+		SccLocalPath5 = Vrhw.Shared
+		SccProjectUniqueName6 = Vrhw.Tests\\Vrhw.Tests.csproj
+		SccProjectTopLevelParentUniqueName6 = Vrhw.Api.sln
+		SccProjectName6 = Vrhw.Tests
+		SccLocalPath6 = Vrhw.Tests
+	EndGlobalSection
+EndGlobal
