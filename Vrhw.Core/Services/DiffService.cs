@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Vrhw.Shared.DTOs;
 using Vrhw.Shared.Helpers;
 using Vrhw.Shared.Interfaces;
 using Vrhw.Shared.Models;
@@ -43,7 +42,7 @@ namespace Vrhw.Core.Services
         {
             var diff = _diffReository.GetDiff(id);
 
-            if(diff == null)
+            if (diff == null)
             {
                 return null;
             }

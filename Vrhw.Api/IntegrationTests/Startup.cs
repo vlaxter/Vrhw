@@ -1,31 +1,32 @@
-﻿using System;
-using System.Threading.Tasks;
-using Microsoft.Owin;
+﻿using Microsoft.Owin;
 using Owin;
-using System.Web.Http;
 using SimpleInjector;
 using SimpleInjector.Extensions.ExecutionContextScoping;
-using Vrhw.Shared.Interfaces;
+using SimpleInjector.Integration.WebApi;
+using System.Web.Http;
 using Vrhw.Core.Services;
 using Vrhw.Repository.Memory;
-using SimpleInjector.Integration.WebApi;
-using Vrhw.Repository.Sql;
+using Vrhw.Shared.Interfaces;
 
 [assembly: OwinStartup(typeof(Vrhw.Api.IntegrationTests.Startup))]
 
 namespace Vrhw.Api.IntegrationTests
 {
+    /// <summary>
+    /// Configuration to run the Integration tests in an application hosted in memory
+    /// </summary>
     public class Startup
     {
         public void Configuration(IAppBuilder appBuilder)
         {
+            // Dependency Inyections
             var container = new Container();
             container.Options.DefaultScopedLifestyle = new ExecutionContextScopeLifestyle();
             container.Register<IDiffService, DiffService>(Lifestyle.Scoped);
             //container.Register<IDiffRepository, SqlRepository>(Lifestyle.Scoped);
             container.Register<IDiffRepository, MemoryRepository>(Lifestyle.Scoped);
             container.Verify();
-            
+
             appBuilder.Use(async (context, next) =>
             {
                 using (container.BeginExecutionContextScope())
@@ -33,7 +34,8 @@ namespace Vrhw.Api.IntegrationTests
                     await next();
                 }
             });
-            
+
+            // Mappings for the in memory host
             var config = new HttpConfiguration();
             config.Routes.MapHttpRoute("DefaultApi", "v1/{controller}/{id}/{action}", new { id = RouteParameter.Optional, action = RouteParameter.Optional });
             config.DependencyResolver = new SimpleInjectorWebApiDependencyResolver(container);  // https://github.com/simpleinjector/SimpleInjector/issues/138

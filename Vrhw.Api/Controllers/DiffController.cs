@@ -1,8 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Net;
+﻿using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using Vrhw.Shared.DTOs;
 using Vrhw.Shared.Interfaces;
 using Vrhw.Shared.Models;
 
@@ -25,7 +23,7 @@ namespace Vrhw.Api.Controllers
             var status = HttpStatusCode.BadRequest;
             if (request != null && !string.IsNullOrWhiteSpace(request.Data))
             {
-                status = _diffService.Left(id, request.Data)? HttpStatusCode.Created: HttpStatusCode.BadRequest;
+                status = _diffService.Left(id, request.Data) ? HttpStatusCode.Created : HttpStatusCode.BadRequest;
             }
 
             return Request.CreateResponse(status);

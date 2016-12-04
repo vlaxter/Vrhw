@@ -13,7 +13,7 @@ namespace Vrhw.Tests
     public class DiffServiceTests
     {
         [Fact]
-        public void Left_Should_return_true_if_data_is_Base64_string()
+        public void Left_Should_return_true_When_data_is_Base64_string()
         {
             // Arrange
             var fakeRepository = new Mock<IDiffRepository>();
@@ -30,7 +30,7 @@ namespace Vrhw.Tests
         }
 
         [Fact]
-        public void Left_Should_return_false_if_data_is_Base64_string()
+        public void Left_Should_return_false_When_data_is_Base64_string()
         {
             // Arrange
             var fakeRepository = new Mock<IDiffRepository>();
@@ -47,7 +47,7 @@ namespace Vrhw.Tests
         }
 
         [Fact]
-        public void Right_Should_return_true_if_data_is_Base64_string()
+        public void Right_Should_return_true_When_data_is_Base64_string()
         {
             // Arrange
             var fakeRepository = new Mock<IDiffRepository>();
@@ -64,7 +64,7 @@ namespace Vrhw.Tests
         }
 
         [Fact]
-        public void Right_Should_return_false_if_data_is_Base64_string()
+        public void Right_Should_return_false_When_data_is_Base64_string()
         {
             // Arrange
             var fakeRepository = new Mock<IDiffRepository>();
@@ -81,7 +81,7 @@ namespace Vrhw.Tests
         }
 
         [Fact]
-        public void GetDiff_Should_return_Equals_if_left_and_right_are_equals()
+        public void GetDiff_Should_return_Equals_When_left_and_right_are_equals()
         {
             // Arrange
             var fakeRepository = new Mock<IDiffRepository>();
@@ -103,7 +103,7 @@ namespace Vrhw.Tests
         }
 
         [Fact]
-        public void GetDiff_Should_return_SizeDoNotMatch_if_left_and_right_are_different_in_size()
+        public void GetDiff_Should_return_SizeDoNotMatch_When_left_and_right_are_different_in_size()
         {
             // Arrange
             var fakeRepository = new Mock<IDiffRepository>();
@@ -125,7 +125,7 @@ namespace Vrhw.Tests
         }
 
         [Fact]
-        public void GetDiff_Should_return_ContentDoNotMatch_if_left_and_right_are_same_size_but_different_in_content()
+        public void GetDiff_Should_return_ContentDoNotMatch_When_left_and_right_are_same_size_but_different_in_content()
         {
             // Arrange
             var fakeRepository = new Mock<IDiffRepository>();

@@ -3,7 +3,6 @@ using SimpleInjector.Integration.WebApi;
 using System.Web.Http;
 using Vrhw.Core.Services;
 using Vrhw.Repository.Memory;
-using Vrhw.Repository.Sql;
 using Vrhw.Shared.Interfaces;
 
 namespace Vrhw.Api.App_Start

@@ -3,3 +3,16 @@
 ################################################################################
 
 /packages
+/Vrhw.Api/obj/Debug
+/Vrhw.Api/bin
+/Vrhw.Core/obj/Debug
+/Vrhw.Core/bin/Debug
+/Vrhw.Tests/obj/Debug
+/Vrhw.Tests/bin/Debug
+/Vrhw.Shared/obj/Debug
+/Vrhw.Shared/bin/Debug
+/Vrhw.Repository.Sql/obj/Debug
+/Vrhw.Repository.Sql/bin/Debug
+/Vrhw.Repository.Memory/obj/Debug
+/Vrhw.Repository.Memory/bin/Debug
+/.vs/Vrhw/v14

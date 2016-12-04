@@ -3,7 +3,6 @@ using Microsoft.Owin.Testing;
 using System;
 using System.Net;
 using System.Net.Http;
-using Vrhw.Shared.DTOs;
 using Vrhw.Shared.Helpers;
 using Vrhw.Shared.Models;
 using Xunit;
@@ -33,7 +32,7 @@ namespace Vrhw.Api.IntegrationTests
         }
 
         [Fact]
-        public async void PutLeft_Should_return_HttpStatusCode_BadRequest_400_if_data_is_not_Base64()
+        public async void PutLeft_Should_return_HttpStatusCode_BadRequest_400_When_data_is_not_Base64()
         {
             // Arrange
             var data = new RequestModel { Data = "=NotBase64=" };
@@ -46,7 +45,7 @@ namespace Vrhw.Api.IntegrationTests
         }
 
         [Fact]
-        public async void PutLeft_Should_return_HttpStatusCode_BadRequest_400_if_data_is_null()
+        public async void PutLeft_Should_return_HttpStatusCode_BadRequest_400_When_data_is_null()
         {
             // Arrange
             // Act
@@ -70,7 +69,7 @@ namespace Vrhw.Api.IntegrationTests
         }
 
         [Fact]
-        public async void PutRight_Should_return_HttpStatusCode_BadRequest_400_if_data_is_not_Base64()
+        public async void PutRight_Should_return_HttpStatusCode_BadRequest_400_When_data_is_not_Base64()
         {
             // Arrange
             var data = new RequestModel { Data = "=NotBase64=" };
@@ -83,7 +82,7 @@ namespace Vrhw.Api.IntegrationTests
         }
 
         [Fact]
-        public async void PutRight_Should_return_HttpStatusCode_BadRequest_400_if_data_is_null()
+        public async void PutRight_Should_return_HttpStatusCode_BadRequest_400_When_data_is_null()
         {
             // Arrange
             // Act
@@ -94,7 +93,7 @@ namespace Vrhw.Api.IntegrationTests
         }
 
         [Fact]
-        public async void GetDiff_When_left_and_right_are_equal_Should_return_equals()
+        public async void GetDiff_Should_return_equals_When_left_and_right_are_equal()
         {
             // Arrange
             var data = new RequestModel { Data = "QmxhZGltaXIgUmliZXJhIE1vcmE=" };
@@ -112,7 +111,7 @@ namespace Vrhw.Api.IntegrationTests
         }
 
         [Fact]
-        public async void GetDiff_When_left_and_right_are_different_in_size_Should_return_SizeDoNotMatch()
+        public async void GetDiff_Should_return_SizeDoNotMatch_When_left_and_right_are_different_in_size()
         {
             // Arrange
             var dataLeft = new RequestModel { Data = "VGhpcyBpcyBhIHVuaXQgdGVzdA==" };
@@ -131,7 +130,7 @@ namespace Vrhw.Api.IntegrationTests
         }
 
         [Fact]
-        public async void GetDiff_When_left_and_right_are_same_size_but_different_in_content_Should_return_ContentDoNotMatch()
+        public async void GetDiff_Should_return_ContentDoNotMatch_When_left_and_right_are_same_size_but_different_in_content_()
         {
             // Arrange
             var dataLeft = new RequestModel { Data = "VGhpcyBpcyB0aGUgdGVzdA==" };
@@ -150,7 +149,7 @@ namespace Vrhw.Api.IntegrationTests
         }
 
         [Fact]
-        public void GetDiff_When_doen_not_exists_Should_return_HttpStatusCode_BadRequest_400()
+        public void GetDiff_Should_return_HttpStatusCode_BadRequest_400_When_does_not_exists()
         {
             // Arrange
             // Act

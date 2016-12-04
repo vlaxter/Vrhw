@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Vrhw.Shared.Models
+﻿namespace Vrhw.Shared.Models
 {
+    /// <summary>
+    /// Contains the strings that are used across the project to avoyd typos.
+    /// </summary>
     public static class DiffMessages
     {
         public const string DiffResultTypeProperty = "diffResultType";
