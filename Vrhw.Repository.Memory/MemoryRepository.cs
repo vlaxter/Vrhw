@@ -8,10 +8,6 @@ namespace Vrhw.Repository.Memory
     {
         private static Dictionary<int, DiffDto> _memory = new Dictionary<int, DiffDto>();
 
-        public MemoryRepository()
-        {
-        }
-
         public void UpsertDiff(int id, string left, string right)
         {
             if (!_memory.ContainsKey(id))
