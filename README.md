@@ -5,7 +5,7 @@ Diff API - Assignment from Teletrax / 4C Insights
 
 ## Getting Started
 Follow the next steps to setup the project in you local machine:
-* Get the solution and open it with Visual Studio 2015.
+* Get the solution and open it with Visual Studio.
 * Restore the NuGet Packages and Build the solution.
 * By default the application uses a memory repository so there is no need to worry about setting up a storage.
 * Make sure that ```Vrhw.Api``` is set as default startUp project and run the application.
