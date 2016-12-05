@@ -58,31 +58,4 @@ Global
 		{EA40DAEA-BE71-4141-BCCF-21F5CCDC55A3} = {F3290F4A-1EEF-48E7-9B50-3B889B7D2386}
 		{8988EE85-3DF7-4F54-A43A-FF88D86CED8E} = {F3290F4A-1EEF-48E7-9B50-3B889B7D2386}
 	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 7
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://vrivera.visualstudio.com/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = Vrhw.Api\\Vrhw.Api.csproj
-		SccProjectName1 = Vrhw.Api
-		SccLocalPath1 = Vrhw.Api
-		SccProjectUniqueName2 = Vrhw.Core\\Vrhw.Core.csproj
-		SccProjectName2 = Vrhw.Core
-		SccLocalPath2 = Vrhw.Core
-		SccProjectUniqueName3 = Vrhw.Repository.Memory\\Vrhw.Repository.Memory.csproj
-		SccProjectTopLevelParentUniqueName3 = Vrhw.Api.sln
-		SccProjectName3 = Vrhw.Repository.Memory
-		SccLocalPath3 = Vrhw.Repository.Memory
-		SccProjectUniqueName4 = Vrhw.Repository.Sql\\Vrhw.Repository.Sql.csproj
-		SccProjectTopLevelParentUniqueName4 = Vrhw.Api.sln
-		SccProjectName4 = Vrhw.Repository.Sql
-		SccLocalPath4 = Vrhw.Repository.Sql
-		SccProjectUniqueName5 = Vrhw.Shared\\Vrhw.Shared.csproj
-		SccProjectName5 = Vrhw.Shared
-		SccLocalPath5 = Vrhw.Shared
-		SccProjectUniqueName6 = Vrhw.Tests\\Vrhw.Tests.csproj
-		SccProjectTopLevelParentUniqueName6 = Vrhw.Api.sln
-		SccProjectName6 = Vrhw.Tests
-		SccLocalPath6 = Vrhw.Tests
-	EndGlobalSection
 EndGlobal
