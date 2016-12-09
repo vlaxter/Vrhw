@@ -2,7 +2,7 @@
 Diff API - Assignment from Teletrax / 4C Insights
 
 ## Getting Started
-Follow the next steps to setup the project in you local machine:
+Follow the next steps to setup the project in your local machine:
 * Get the solution and open it with Visual Studio.
 * Restore the NuGet Packages and Build the solution.
 * By default the application uses a memory repository so there is no need to worry about setting up a storage.
