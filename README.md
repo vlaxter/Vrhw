@@ -28,7 +28,7 @@ container.Register<IDiffRepository, SqlRepository>(Lifestyle.Scoped);
 //container.Register<IDiffRepository, MemoryRepository>(Lifestyle.Scoped);
 ```
 Now you can run the ```Vrhw.Api``` and it will use a Sql Server Database as Repository.
-* In order to run the integration tests it is necesary to edit the ```Vrhw.Api/IntegrationTests/Startup.cs``` to instantiate the 
+* In order to run the integration tests it is necesary to edit the ```Vrhw.Api/App_Start/IntegratiomnTestsStartup.cs``` to instantiate the 
 ```SqlRepository``` instead of the ```MemoryRepository```.
 
 #### Running Unit Tests and Integration Tests
