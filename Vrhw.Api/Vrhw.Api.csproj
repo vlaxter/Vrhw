@@ -163,8 +163,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="IntegrationTests\DiffIntegrationTests.cs" />
-    <Compile Include="IntegrationTests\Startup.cs" />
+    <Compile Include="App_Start\IntegrationTestsStartup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

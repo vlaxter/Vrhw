@@ -8,14 +8,14 @@ using Vrhw.Core.Services;
 using Vrhw.Repository.Memory;
 using Vrhw.Shared.Interfaces;
 
-[assembly: OwinStartup(typeof(Vrhw.Api.IntegrationTests.Startup))]
+[assembly: OwinStartup(typeof(Vrhw.Api.IntegrationTests.IntegrationTestsStartup))]
 
 namespace Vrhw.Api.IntegrationTests
 {
     /// <summary>
     /// Configuration to run the Integration tests in an application hosted in memory
     /// </summary>
-    public class Startup
+    public class IntegrationTestsStartup
     {
         public void Configuration(IAppBuilder appBuilder)
         {

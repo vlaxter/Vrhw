@@ -7,7 +7,7 @@ using Vrhw.Shared.Helpers;
 using Vrhw.Shared.Models;
 using Xunit;
 
-namespace Vrhw.Api.IntegrationTests
+namespace Vrhw.Tests.IntegrationTests
 {
     public class DiffIntegrationTests : IDisposable
     {
@@ -15,7 +15,7 @@ namespace Vrhw.Api.IntegrationTests
 
         public DiffIntegrationTests()
         {
-            _server = TestServer.Create<Startup>();
+            _server = TestServer.Create<Vrhw.Api.IntegrationTests.IntegrationTestsStartup>();
         }
 
         [Fact]
