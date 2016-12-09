@@ -3,6 +3,7 @@ using Microsoft.Owin.Testing;
 using System;
 using System.Net;
 using System.Net.Http;
+using Vrhw.Api.App_Start;
 using Vrhw.Shared.Helpers;
 using Vrhw.Shared.Models;
 using Xunit;
@@ -15,7 +16,7 @@ namespace Vrhw.Tests.IntegrationTests
 
         public DiffIntegrationTests()
         {
-            _server = TestServer.Create<Vrhw.Api.IntegrationTests.IntegrationTestsStartup>();
+            _server = TestServer.Create<IntegrationTestsStartup>();
         }
 
         [Fact]
