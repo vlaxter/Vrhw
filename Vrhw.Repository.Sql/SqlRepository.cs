@@ -4,6 +4,7 @@ using System.Linq.Expressions;
 using Vrhw.Repository.Sql.Entities;
 using Vrhw.Shared.DTOs;
 using Vrhw.Shared.Interfaces;
+using AutoMapper;
 
 namespace Vrhw.Repository.Sql
 {
@@ -11,17 +12,10 @@ namespace Vrhw.Repository.Sql
     {
         private readonly VrhwContext _context;
 
-        // Typed lambda expression for Select() method.
-        private static readonly Expression<Func<Diff, DiffDto>> AsDiffDto =
-            x => new DiffDto
-            {
-                Left = x.Left,
-                Right = x.Right
-            };
-
         public SqlRepository()
         {
             _context = new VrhwContext();
+            Mapper.Initialize(cfg => cfg.CreateMap<Diff, DiffDto>());
         }
 
         public void UpsertDiff(int id, string left, string right)
@@ -41,8 +35,9 @@ namespace Vrhw.Repository.Sql
 
         public DiffDto GetDiff(int id)
         {
-            var diff = _context.Diff.Where(x => x.Id == id).Select(AsDiffDto).FirstOrDefault();
-            return diff;
+            var diff = _context.Diff.FirstOrDefault(x => x.Id == id);
+            var diffDto = Mapper.Map<DiffDto>(diff);
+            return diffDto;
         }
     }
 }
