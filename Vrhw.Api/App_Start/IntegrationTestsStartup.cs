@@ -40,7 +40,7 @@ namespace Vrhw.Api.App_Start
             config.Routes.MapHttpRoute("DefaultApi", "v1/{controller}/{id}/{action}", new { id = RouteParameter.Optional, action = RouteParameter.Optional });
             config.DependencyResolver = new SimpleInjectorWebApiDependencyResolver(container);  // https://github.com/simpleinjector/SimpleInjector/issues/138
 
-            appBuilder.UseWebApi(config).UseNancy();
+            appBuilder.UseWebApi(config);
         }
     }
 }
