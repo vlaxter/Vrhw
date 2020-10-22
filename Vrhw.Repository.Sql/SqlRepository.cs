@@ -11,11 +11,13 @@ namespace Vrhw.Repository.Sql
     public class SqlRepository : IDiffRepository
     {
         private readonly VrhwContext _context;
+        private IMapper _mapper;
 
         public SqlRepository()
         {
             _context = new VrhwContext();
-            Mapper.Initialize(cfg => cfg.CreateMap<Diff, DiffDto>());
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<Diff, DiffDto>());
+            _mapper = config.CreateMapper();
         }
 
         public void UpsertDiff(int id, string left, string right)
@@ -36,7 +38,7 @@ namespace Vrhw.Repository.Sql
         public DiffDto GetDiff(int id)
         {
             var diff = _context.Diff.FirstOrDefault(x => x.Id == id);
-            var diffDto = Mapper.Map<DiffDto>(diff);
+            var diffDto = _mapper.Map<DiffDto>(diff);
             return diffDto;
         }
     }
