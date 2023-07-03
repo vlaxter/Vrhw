@@ -1,5 +1,4 @@
 # Vrhw
-Diff API - Assignment from Teletrax / 4C Insights
 
 ## Getting Started
 Follow the next steps to setup the project in your local machine:
